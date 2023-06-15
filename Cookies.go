@@ -28,3 +28,26 @@ func GetCookiesFromResponse(resp *http.Response, cookieNames []string) ([]*http.
 
 	return cookies, nil
 }
+
+func GetCookieFromResponse(resp *http.Response, cookieName string) (*http.Cookie, error) {
+	for _, header := range resp.Header.Values("Set-Cookie") {
+		cookie := strings.SplitN(header, ";", 2)[0]
+		if strings.HasPrefix(cookie, cookieName+"=") {
+			value := strings.TrimPrefix(cookie, cookieName+"=")
+			return &http.Cookie{Name: cookieName, Value: value}, nil
+		}
+	}
+
+	return nil, fmt.Errorf("cookie not found: %s", cookieName)
+}
+
+func SetCookieForRequest(req *http.Request, cookie *http.Cookie) {
+	req.AddCookie(cookie)
+}
+
+func SetCookiesForRequest(req *http.Request, cookies []*http.Cookie) {
+	for _, cookie := range cookies {
+		req.AddCookie(cookie)
+	}
+}
+
