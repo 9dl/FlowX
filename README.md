@@ -17,15 +17,12 @@ Please read the [LICENSE](LICENSE) file for the full text of the GNU General Pub
 To install FlowX, you can use the following command:
 
 ```shell
-go get github.com/VortexCoding/FlowX/Lib
+go get github.com/VortexCoding/FlowX
 ```
 
 ## Documentation
 
-Detailed documentation for FlowX can be found on the official website:
-
-[FlowX Documentation](./docs)
-
+Detailed documentation for FlowX can be found here: [FlowX Documentation](./docs)
 
 ## Current Features
 
