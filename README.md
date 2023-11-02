@@ -17,12 +17,8 @@ Please read the [LICENSE](LICENSE) file for the full text of the GNU General Pub
 To install FlowX, you can use the following command:
 
 ```shell
-go get github.com/StreamlineX/FlowX
+go get github.com/9dl/FlowX
 ```
-
-## Documentation
-
-Detailed documentation for FlowX can be found here: [FlowX Documentation](./docs)
 
 ## Current Features
 
@@ -45,4 +41,4 @@ FlowX offers the following features:
 - Secure AES encryption and decryption for data protection (EncryptAES, DecryptAES)
 - Hashing data using the SHA256 algorithm for data integrity (HashSHA256)
 
-Stay tuned for more updates and enhancements to FlowX.
+FlowX is not in Development anymore, it will probaly contain unfixed bugs.
