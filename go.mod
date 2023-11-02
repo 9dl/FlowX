@@ -1,4 +1,4 @@
-module github.com/VortexCoding/FlowX
+module github.com/9dl/FlowX
 
 go 1.19
 
